@@ -12,6 +12,8 @@ class Bob {
     class func hey(input:String) -> String {
         if (isShouting(input)) {
             return "Woah, chill out!"
+        } else if (isSilence(input)) {
+            return "Fine, be that way."
         } else if (isAskingQuestion(input)) {
             return "Sure."
         }
@@ -23,6 +25,10 @@ func isShouting(input:String) -> Bool {
     let hasLowercaseLetters = (input != input.uppercaseString)
     let hasUppercaseLetters = (input != input.lowercaseString)
     return hasUppercaseLetters && !hasLowercaseLetters
+}
+
+func isSilence(input:String) -> Bool {
+    return input == ""
 }
 
 func isAskingQuestion(input:String) -> Bool {

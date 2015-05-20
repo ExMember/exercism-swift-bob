@@ -12,12 +12,16 @@ class Bob {
     class func hey(input:String) -> String {
         if (isShouting(input)) {
             return "Woah, chill out!"
+            
         } else if (isSilence(input)) {
             return "Fine, be that way."
+        
         } else if (isAskingQuestion(input)) {
             return "Sure."
+        
+        } else {
+            return "Whatever."
         }
-        return "Whatever."
     }
 }
 

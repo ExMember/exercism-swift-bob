@@ -13,6 +13,8 @@
 		6D03F68B1B0C7853009F282F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D03F68A1B0C7853009F282F /* Images.xcassets */; };
 		6D03F68E1B0C7853009F282F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D03F68C1B0C7853009F282F /* LaunchScreen.xib */; };
 		6D03F69A1B0C7853009F282F /* BobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D03F6991B0C7853009F282F /* BobTests.swift */; };
+		6D03F6A41B0C7892009F282F /* Bob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D03F6A31B0C7892009F282F /* Bob.swift */; };
+		6D03F6A51B0C7892009F282F /* Bob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D03F6A31B0C7892009F282F /* Bob.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		6D03F6931B0C7853009F282F /* BobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D03F6981B0C7853009F282F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D03F6991B0C7853009F282F /* BobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BobTests.swift; sourceTree = "<group>"; };
+		6D03F6A31B0C7892009F282F /* Bob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bob.swift; sourceTree = "<group>"; };
+		6D03F6A61B0C78AC009F282F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Bob/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		6D03F6751B0C7853009F282F = {
 			isa = PBXGroup;
 			children = (
+				6D03F6A61B0C78AC009F282F /* README.md */,
 				6D03F6801B0C7853009F282F /* Bob */,
 				6D03F6961B0C7853009F282F /* BobTests */,
 				6D03F67F1B0C7853009F282F /* Products */,
@@ -83,6 +88,7 @@
 				6D03F68A1B0C7853009F282F /* Images.xcassets */,
 				6D03F68C1B0C7853009F282F /* LaunchScreen.xib */,
 				6D03F6811B0C7853009F282F /* Supporting Files */,
+				6D03F6A31B0C7892009F282F /* Bob.swift */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D03F6A41B0C7892009F282F /* Bob.swift in Sources */,
 				6D03F6861B0C7853009F282F /* ViewController.swift in Sources */,
 				6D03F6841B0C7853009F282F /* AppDelegate.swift in Sources */,
 			);
@@ -222,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D03F69A1B0C7853009F282F /* BobTests.swift in Sources */,
+				6D03F6A51B0C7892009F282F /* Bob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

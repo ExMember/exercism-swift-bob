@@ -1,36 +1,124 @@
-//
-//  BobTests.swift
-//  BobTests
-//
-//  Created by Damien Burke on 5/20/15.
-//  Copyright (c) 2015 Damien Burke. All rights reserved.
-//
-
-import UIKit
 import XCTest
 
 class BobTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testStatingSomething() {
+        let input = "Tom-ay-to, tom-aaaah-to."
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testShouting() {
+        let input = "WATCH OUT!"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testAskingAQustion() {
+        let input = "Does this cryogenic chamber make me look fat?"
+        let expected = "Sure."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testTalkingForcefully() {
+        let input = "Let's go make out behind the gym!"
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testUsingAcronyms() {
+        let input = "It's OK if you don't want to go to the DMV."
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testForcefulQuestions() {
+        let input = "WHAT THE HELL WERE YOU THINKING?"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testShoutingNumbers() {
+        let input = "1, 2, 3 GO!"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testOnlyNumbers() {
+        let input = "1, 2, 3."
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testQuestionWithOnlyNumbers() {
+        let input = "4?"
+        let expected = "Sure."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testShoutingWithSpecialCharacters() {
+        let input = "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testShoutingWithUmlautsCharacters() {
+        let input = "ÄMLÄTS!"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testCalmlySpeakingAboutUmlauts() {
+        let input = "ÄMLäTS!"
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testShoutingWithNoExclamationmark() {
+        let input = "I HATE YOU"
+        let expected = "Woah, chill out!"
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testStatementContainingQuestionsMark() {
+        let input = "Ending with a ? means a question."
+        let expected = "Whatever."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testPrattlingOn() {
+        let input = "Wait! Hang on.  Are you going to be OK?"
+        let expected = "Sure."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testSilence() {
+        let input = ""
+        let expected = "Fine, be that way."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testProlongedSilence() {
+        let input = "     "
+        let expected = "Fine, be that way."
+        let result = Bob.hey(input)
+        XCTAssertEqual(expected, result)
     }
     
 }

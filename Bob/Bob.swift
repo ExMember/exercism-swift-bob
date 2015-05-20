@@ -10,6 +10,15 @@ import Foundation
 
 class Bob {
     class func hey(input:String) -> String {
+        if (isShouting(input)) {
+            return "Woah, chill out!"
+        }
         return "Whatever."
     }
+}
+
+func isShouting(input:String) -> Bool {
+    let hasLowercaseLetters = (input != input.uppercaseString)
+    let hasUppercaseLetters = (input != input.lowercaseString)
+    return hasUppercaseLetters && !hasLowercaseLetters
 }

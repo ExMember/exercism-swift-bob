@@ -10,6 +10,6 @@ import Foundation
 
 class Bob {
     class func hey(input:String) -> String {
-        return input
+        return "Whatever."
     }
 }

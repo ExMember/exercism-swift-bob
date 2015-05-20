@@ -28,7 +28,9 @@ func isShouting(input:String) -> Bool {
 }
 
 func isSilence(input:String) -> Bool {
-    return input == ""
+    let whitespaceCharacters = NSCharacterSet.whitespaceCharacterSet()
+    let inputWithoutWhitespace = input.stringByTrimmingCharactersInSet(whitespaceCharacters)
+    return inputWithoutWhitespace == ""
 }
 
 func isAskingQuestion(input:String) -> Bool {

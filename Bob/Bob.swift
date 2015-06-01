@@ -37,10 +37,6 @@ class Bob {
     }
     
     private class func isAskingQuestion(input:String) -> Bool {
-        if (input == "") {
-            return false
-        }
-        let lastChar = input[input.endIndex.predecessor()]
-        return lastChar == "?"
+        return input.hasSuffix("?")
     }
 }

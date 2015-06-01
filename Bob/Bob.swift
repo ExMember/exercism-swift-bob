@@ -23,24 +23,24 @@ class Bob {
             return "Whatever."
         }
     }
-}
 
-func isShouting(input:String) -> Bool {
-    let hasLowercaseLetters = (input != input.uppercaseString)
-    let hasUppercaseLetters = (input != input.lowercaseString)
-    return hasUppercaseLetters && !hasLowercaseLetters
-}
-
-func isSilence(input:String) -> Bool {
-    let whitespaceCharacters = NSCharacterSet.whitespaceCharacterSet()
-    let inputWithoutWhitespace = input.stringByTrimmingCharactersInSet(whitespaceCharacters)
-    return inputWithoutWhitespace == ""
-}
-
-func isAskingQuestion(input:String) -> Bool {
-    if (input == "") {
-        return false
+    class func isShouting(input:String) -> Bool {
+        let hasLowercaseLetters = (input != input.uppercaseString)
+        let hasUppercaseLetters = (input != input.lowercaseString)
+        return hasUppercaseLetters && !hasLowercaseLetters
     }
-    let lastChar = input[input.endIndex.predecessor()]
-    return lastChar == "?"
+    
+    class func isSilence(input:String) -> Bool {
+        let whitespaceCharacters = NSCharacterSet.whitespaceCharacterSet()
+        let inputWithoutWhitespace = input.stringByTrimmingCharactersInSet(whitespaceCharacters)
+        return inputWithoutWhitespace == ""
+    }
+    
+    class func isAskingQuestion(input:String) -> Bool {
+        if (input == "") {
+            return false
+        }
+        let lastChar = input[input.endIndex.predecessor()]
+        return lastChar == "?"
+    }
 }

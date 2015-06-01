@@ -24,19 +24,19 @@ class Bob {
         }
     }
 
-    class func isShouting(input:String) -> Bool {
+    private class func isShouting(input:String) -> Bool {
         let hasLowercaseLetters = (input != input.uppercaseString)
         let hasUppercaseLetters = (input != input.lowercaseString)
         return hasUppercaseLetters && !hasLowercaseLetters
     }
     
-    class func isSilence(input:String) -> Bool {
+    private class func isSilence(input:String) -> Bool {
         let whitespaceCharacters = NSCharacterSet.whitespaceCharacterSet()
         let inputWithoutWhitespace = input.stringByTrimmingCharactersInSet(whitespaceCharacters)
         return inputWithoutWhitespace == ""
     }
     
-    class func isAskingQuestion(input:String) -> Bool {
+    private class func isAskingQuestion(input:String) -> Bool {
         if (input == "") {
             return false
         }
